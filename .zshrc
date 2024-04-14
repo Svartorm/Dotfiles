@@ -124,7 +124,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 ###############################################################################
@@ -132,16 +132,15 @@ source $ZSH/oh-my-zsh.sh
 ###############################################################################
 
 ##### Init Scripts #####
-eval "$(zoxide init --cmd cd zsh)"
+source ~/.zsh/zsh_init
+
+##### Shell Prompt #####
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 ##### Aliases #####
-for ALIAS in ~/zshrc/aliases/*; do
-	echo "sourcing $ALIAS"
-	source $ALIAS
-done
+source ~/.zsh/zsh_aliases
 
 ##### Scripts #####
-for SCRIPT in ~/zshrc/scripts/*; do
-	echo "sourcing $SCRIPT"
+for SCRIPT in ~/.zsh/scripts/*; do
 	source $SCRIPT
 done

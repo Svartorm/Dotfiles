@@ -1,0 +1,5 @@
+eval "$(zoxide init --cmd cd zsh)"
+
+source .zsh/zsh_colours
+
+neofetch --source ~/.config/neofetch/images/duke-ascii-colored.sh
